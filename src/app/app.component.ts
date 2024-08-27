@@ -65,7 +65,6 @@ export class AppComponent implements OnInit {
   public onUpdateStudent(): void {
     if (this.editStudent) {
       console.log("student === ", this.editStudent);
-      // this.editStudent.faculty = this.faculties.find(faculty => faculty.name === this.editStudent.faculty?.name) || null;
       this.studentService.updateStudents(this.editStudent).subscribe(
         (response: Student) => {
           console.log(response);
